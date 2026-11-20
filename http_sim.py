@@ -109,7 +109,7 @@ if response and response.haslayer(Raw):
     print(f"[*] Response received ({len(response[Raw].load)} bytes):")
     print(response[Raw].load.decode(errors="replace")[:500])
 elif response:
-    print(f"[*] Response received (flags={response[TCP].flags:#x})")
+    print(f"[*] Response received (flags={str(response[TCP].flags)})")
 else:
     print("[!] No response received")
 
